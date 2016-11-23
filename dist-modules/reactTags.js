@@ -180,6 +180,8 @@ var ReactTags = _react2.default.createClass({
           query = this.state.suggestions[this.state.selectedIndex];
         }
         this.addTag(query);
+      } else {
+        this.props.emptyEnter();
       }
     }
 
