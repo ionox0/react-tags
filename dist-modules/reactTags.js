@@ -40,6 +40,7 @@ var DefaultClassNames = {
   tags: 'ReactTags__tags',
   tagInput: 'ReactTags__tagInput',
   tagInputField: 'ReactTags__tagInputField',
+  submit: 'ReactTags__submit',
   selected: 'ReactTags__selected',
   tag: 'ReactTags__tag',
   remove: 'ReactTags__remove',
@@ -326,7 +327,7 @@ var ReactTags = _react2.default.createClass({
         onPaste: this.handlePaste }),
       _react2.default.createElement(
         'div',
-        { className: 'tag-submit',
+        { className: this.state.classNames.submit,
           onClick: this.props.onEmptyEnter },
         'Submit'
       ),
