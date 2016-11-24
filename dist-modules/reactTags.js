@@ -150,10 +150,10 @@ var ReactTags = _react2.default.createClass({
     }
   },
   handleKeyDown: function handleKeyDown(e) {
-    var _state = this.state;
-    var query = _state.query;
-    var selectedIndex = _state.selectedIndex;
-    var suggestions = _state.suggestions;
+    var _state = this.state,
+        query = _state.query,
+        selectedIndex = _state.selectedIndex,
+        suggestions = _state.suggestions;
 
     // hide suggestions menu on escape
 
@@ -324,6 +324,12 @@ var ReactTags = _react2.default.createClass({
         onChange: this.handleChange,
         onKeyDown: this.handleKeyDown,
         onPaste: this.handlePaste }),
+      _react2.default.createElement(
+        'div',
+        { className: 'tag-submit',
+          onClick: this.props.onEmptyEnter },
+        'Submit'
+      ),
       _react2.default.createElement(_Suggestions2.default, { query: query,
         suggestions: suggestions,
         selectedIndex: selectedIndex,
