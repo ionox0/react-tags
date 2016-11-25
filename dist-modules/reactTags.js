@@ -328,8 +328,8 @@ var ReactTags = _react2.default.createClass({
       _react2.default.createElement(
         'div',
         { className: this.state.classNames.submit,
-          onClick: this.props.onEmptyEnter },
-        'Submit'
+          onClick: this.props.emptyEnter },
+        this.props.btnText
       ),
       _react2.default.createElement(_Suggestions2.default, { query: query,
         suggestions: suggestions,
