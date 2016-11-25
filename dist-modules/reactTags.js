@@ -249,7 +249,12 @@ var ReactTags = _react2.default.createClass({
       var possibleMatches = this.filteredSuggestions(tag, this.props.suggestions);
 
       if (this.props.autocomplete === 1 && possibleMatches.length === 1 || this.props.autocomplete === true && possibleMatches.length) {
-        tag = possibleMatches[0];
+        tag = possibleMatches.find(function (s) {
+          return s === tag;
+        });
+        if (!tag) {
+          tag = possibleMatches[0];
+        }
       }
     }
 
