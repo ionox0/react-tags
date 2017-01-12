@@ -250,7 +250,7 @@ var ReactTags = _react2.default.createClass({
 
       if (this.props.autocomplete === 1 && possibleMatches.length === 1 || this.props.autocomplete === true && possibleMatches.length) {
         tag = possibleMatches.find(function (s) {
-          return s === tag;
+          return s.toLowerCase() === tag.toLowerCase();
         });
         if (!tag) {
           tag = possibleMatches[0];
